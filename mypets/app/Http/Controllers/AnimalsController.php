@@ -13,7 +13,7 @@ class AnimalsController extends Controller
      */
     public function index()
     {
-        //
+        return response($content)->header('Content-Type', JSON);
     }
 
     /**
