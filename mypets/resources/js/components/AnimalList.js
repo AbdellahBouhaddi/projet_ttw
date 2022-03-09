@@ -1,4 +1,5 @@
 import React,{Component} from "react"
+import axios from 'axios'
 
 
 class AnimalList extends Component{
@@ -12,6 +13,17 @@ class AnimalList extends Component{
             my_likes:!this.state.my_likes
         })
     }
+    
+        componentDidMount () {
+            axios.get('/js/components/AnimalList').then(response => {
+              this.setState({
+                AnimalList: response.data
+              })
+            })
+          }
+
+
+    
 
 
     render(){
