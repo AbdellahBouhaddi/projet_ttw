@@ -14,8 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('animals', function (Blueprint $table) {
-            $table->id();
+
+            $table->string('nom');
+            $table->integer('age');
+            $table->string('descr');
+            $table->string('image');
+            
+
             $table->timestamps();
+            $table->id();
+
         });
     }
 
